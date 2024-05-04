@@ -1,24 +1,23 @@
 package org.codinggym.lt;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
-
-import static org.codinggym.lt.Solution.computeMinimumLoss;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SolutionTest {
 
   @Test
   void testThreeYears() {
     //given
-    int n = 3;
-    List<Integer> values = Arrays.asList(5, 10, 3);
+    List<Long> values = Arrays.asList(5L, 10L, 3L);
 
     int expected = 2;
 
-    int actual = computeMinimumLoss(n, values);
+    int actual = Result.minimumLoss(values);
 
     assertEquals(expected, actual);
   }
@@ -26,12 +25,11 @@ class SolutionTest {
   @Test
   void testFiveYears() {
     //given
-    int n = 5;
-    List<Integer> values = Arrays.asList(20, 7, 8, 2, 5);
+    List<Long> values = Arrays.asList(20L, 7L, 8L, 2L, 5L);
 
     int expected = 2;
 
-    int actual = computeMinimumLoss(n, values);
+    int actual = Result.minimumLoss(values);
 
     assertEquals(expected, actual);
   }
